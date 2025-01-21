@@ -1,5 +1,7 @@
 node{
+    
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
+    
     echo "Job name is : ${env.JOB_NAME}"
     echo "Build number is : ${env.BUILD_NUMBER}"
     echo "Node name is : ${env.NODE_NAME}"
